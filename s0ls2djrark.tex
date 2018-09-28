@@ -54,12 +54,12 @@ The wave function $\psi(\vec{r},t)$ at time $t$ can be determined with the help 
 				\psi(\vv{r},t)	&=\braket{\vv{r}|\psi(t)}=\braket{\vv{r}|\hat{U}(t,0)|\psi(0)}\\
 				&=\int\dif\vv{r}'\bra{\vv{r}}\hat{U}(t,0)\ket{\vv{r}'}\underbrace{\bra{\vv{r}'}\psi(0)\rangle}_{=\psi(\vv{r'}, 0)}.
 			\end{align}
-	The first factor in the integral describes the propagation of a wave packet localized at $\vv{r}'$ during the time $t$. The second factor is the wave function of a particle localized at $\vv{r}'$ at a time $t=0$. %Is wave function of particle?
+The first factor in the integral describes the propagation of a wave packet localized at $\vv{r}'$ during the time $t$. The second factor is the wave function of a particle localized at $\vv{r}'$ at a time $t=0$. %Is wave function of particle?
 
-			\subsubsection{Space and Momentum}
+\subsubsection{Space and Momentum}
 
-				Just like $\hat{H}$ is a generator of translation in time, $\hat{\vv{p}}$ is the generator for translation in space and $\hat{\vv{r}}$ is the generator for translation in momentum:
+Just like $\hat{H}$ is a generator of translation in time, $\hat{\vv{p}}$ is the generator for translation in space and $\hat{\vv{r}}$ is the generator for translation in momentum:
 				\begin{align}
-					\hat{\mathcal{T}}_R(\Delta{\vv{r}}) \ket{\vec{r}} &= \eexp{-i\hat{\vv{p}}\cdot{\Delta\vv{r}}/{\hbar}}\ket{\vv{r}}=\ket{\vv{r}+\Delta\vv{r}},\\
-					\hat{\mathcal{T}}_R(\Delta{\vv{p}}) \ket{\vec{p}} &= \eexp{-i\hat{\vv{r}}\cdot{\Delta\vv{p}}/{\hbar}}\ket{\vv{p}}=\ket{\vv{p}+\Delta\vv{p}}.
+					\hat{\mathcal{T}}_R(\Delta{\vv{r}}) \ket{\vec{r}} &= \exp{-i\hat{\vv{p}}\cdot{\Delta\vv{r}}/{\hbar}}\ket{\vv{r}}=\ket{\vv{r}+\Delta\vv{r}},\\
+					\hat{\mathcal{T}}_R(\Delta{\vv{p}}) \ket{\vec{p}} &= \exp{-i\hat{\vv{r}}\cdot{\Delta\vv{p}}/{\hbar}}\ket{\vv{p}}=\ket{\vv{p}+\Delta\vv{p}}.
 				\end{align}
