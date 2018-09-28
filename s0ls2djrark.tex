@@ -35,7 +35,7 @@
 		\subsubsection{Time: Schrödinger Equation}
 			In the following, we would like to get a basic intuition of how quantum mechanics works. For the Schrödinger equation
 			\begin{align}
-				i\hbar \diffp{\ket{\psi(t)}}{t} = \hat{H}\ket{\psi(t)} \label{eq:schrodinger2}
+				i\hbar \partial_t\ket{\psi(t)} = \hat{H}\ket{\psi(t)} \label{eq:schrodinger2}
 			\end{align}
 			we get the formal solution
 			\begin{align}
@@ -47,7 +47,7 @@
 			\end{align}
 			is the time evolution operator. If we write out the Hamiltonian of the point-like particle in \eqref{eq:schrodinger2}, we get
 			\begin{align}
-				i\hbar \diffp{\psi(\vec{r},t)}{t} = -\frac{\hbar^2}{2m}\Laplace\psi(\vv{r},t)+V(\vv{r},t)\psi(\vv{r},t).
+				i\hbar \partial_t\psi(\vec{r},t) = -\frac{\hbar^2}{2m}\Laplace\psi(\vv{r},t)+V(\vv{r},t)\psi(\vv{r},t).
 			\end{align}
 			The wave function $\psi(\vec{r},t)$ at time $t$ can be determined with the help of \eqref{eq:psit} and \eqref{eq:timeevolutionoperator}:
 			\begin{align}
