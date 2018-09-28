@@ -1,0 +1,91 @@
+\section{Important Consequences of the Principles}
+\subsection{Uncertainty Relation}
+
+The product of the variances of two noncommuting operators has a lower limit:
+\begin{align}
+    \Delta \hat{A} \cdot \Delta \hat{B} \geq \frac{1}{2} \left| \Braket{\left[\hat{A},\hat{B}\right]} \right|,
+\end{align}
+				where the variance is defined as $\Delta \hat{A} = \sqrt{\Braket{\hat{A}^2}-\Braket{\hat{A}}^2}$.
+
+				\paragraph{Examples.}
+					\begin{align}
+						\left[ \hat{x}, \hat{p} \right] &= i \hbar \\
+						\left[ \hat{J}_i , \hat{J}_j \right] &= i \hbar \epsilon_{ijk} \hat{J}_k
+					\end{align}
+				\paragraph{Note.} This is a statement about the \emph{state} itself, and not the measurement!
+
+			\subsubsection{Ehrenfest Theorem}
+				With the Ehrenfest theorem, one can determine the time evolution of the expectation value of an operator $\hat{A}$:
+				\begin{align}
+					\diff{}{t}\Braket{\hat{A}}=\frac{1}{i\hbar}\Braket{\left[\hat{A},\hat{H}\right]}+\Braket{\diffp{\hat{A}}{t}}. \label{eq:ehrenfest}
+				\end{align}
+				%
+				If $\hat{A}$ is time-independent and $\left[\hat{A},\hat{H}\right]=0$, the expectation value $\Braket{\hat{A}}$ is a constant of the motion.
+
+	\section{Motion of a Point-Like Particle}
+		\subsection{Wave Functions}
+			In the following, we consider a point-like particle and its observables $\vv{r}$ and $\vv{p}$. The possible basis states can be constructed from the observables we measure. We thus get $\ket{\vv{r}}$ and $\ket{\vv{p}}$ as basis states. Since the particle is localized at one point, we get
+			\begin{align}
+				\braket{\vv{r}|\vv{r}'} =\delta(\vv{r}-\vv{r}').
+			\end{align}
+			%
+			With the completeness relation, we can express the wave function $\ket{\psi}$ of the particle as a linear combination of all possible position states $\ket{\vv{r}}$:
+			\begin{align}
+				\ket{\psi}=\int \dif \vv{r} \ket{\vv{r}}\braket{\vv{r}|\psi},
+			\end{align}
+			where $\psi(\vv{r})=\braket{\vv{r}|\psi}$ and $\psi^*\psi$ is the probability density.
+			%
+			The eigenstates of $\hat{\vv{p}}$ are
+			\begin{align}
+				\ket{\vv{p}}&=\int \dif \vv{r} \ket{\vv{r}} \braket{\vv{r}|\vv{p}} \\
+				&= \frac{1}{(2\pi\hbar)^{\frac{3}{2}}} \int \dif \vv{r} \eexp{{i \vv{p}\cdot\vv{r}}/{\hbar}}\ket{\vv{r}},
+			\end{align}
+			where the exponential function in the integral can be interpreted as a plane wave.
+			%
+			If we expand $\ket{\psi}$ in terms of $\ket{p}$, we get
+			\begin{align}
+				\ket{\psi}=\int \dif \vv{p} \ket{\vv{p}}\underbrace{\braket{\vv{p}|\psi}}_{=\phi(\vv{p})}.
+			\end{align}
+			The second factor in the integral can be expanded as follows:
+			\begin{align}
+				\phi(\vv{p})	&=\braket{\vv{p}|\psi}\\
+				&=\int\dif\vv{r}\braket{\vv{p}|\vv{r}}\braket{\vv{r}|\psi}\\
+				&=\frac{1}{(2\pi\hbar)^{\frac{3}{2}}} \int\dif\vv{r}\eexp{-i\vv{p}\cdot\vv{r}/{\hbar}}\psi(\vv{r}) \label{eq:fourier}
+			\end{align}
+			Equation \eqref{eq:fourier} shows that $\phi(\vv{p})$ and $\psi(\vv{r})$ are Fourier transforms of each other.
+
+	\subsection{Translations of $\ket{\psi}$ in Time, Space and Momentum}
+
+		\subsubsection{Time: Schrödinger Equation}
+			In the following, we would like to get a basic intuition of how quantum mechanics works. For the Schrödinger equation
+			\begin{align}
+				i\hbar \diffp{\ket{\psi(t)}}{t} = \hat{H}\ket{\psi(t)} \label{eq:schrodinger2}
+			\end{align}
+			we get the formal solution
+			\begin{align}
+				\ket{\psi(t)}=\hat{U}(t,0)\ket{\psi(0)}, \label{eq:psit}
+			\end{align}
+			where
+			\begin{align}
+				\hat{U}(t,0) = \eexp{-i{\hat{H}t}/{\hbar}} \label{eq:timeevolutionoperator}
+			\end{align}
+			is the time evolution operator. If we write out the Hamiltonian of the point-like particle in \eqref{eq:schrodinger2}, we get
+			\begin{align}
+				i\hbar \diffp{\psi(\vec{r},t)}{t} = -\frac{\hbar^2}{2m}\Laplace\psi(\vv{r},t)+V(\vv{r},t)\psi(\vv{r},t).
+			\end{align}
+			The wave function $\psi(\vec{r},t)$ at time $t$ can be determined with the help of \eqref{eq:psit} and \eqref{eq:timeevolutionoperator}:
+			\begin{align}
+				\psi(\vv{r},t)	&=\braket{\vv{r}|\psi(t)}=\braket{\vv{r}|\hat{U}(t,0)|\psi(0)}\\
+				&=\int\dif\vv{r}'\bra{\vv{r}}\hat{U}(t,0)\overunderbraces{&\br{2}{\mathbb{1}}}{&\ket{\vv{r}'}&\bra{\vv{r}'}&\psi(0)\rangle}{&&\br{2}{\psi(\vv{r}',0)}}.
+			\end{align}
+			% 
+			%\overunderbraces{&\br{2}{a}}{&&}{&&\br{2}{}}
+			The first factor in the integral describes the propagation of a wave packet localized at $\vv{r}'$ during the time $t$. The second factor is the wave function of a particle localized at $\vv{r}'$ at a time $t=0$. %Is wave function of particle?
+
+			\subsubsection{Space and Momentum}
+
+				Just like $\hat{H}$ is a generator of translation in time, $\hat{\vv{p}}$ is the generator for translation in space and $\hat{\vv{r}}$ is the generator for translation in momentum:
+				\begin{align}
+					\hat{\mathcal{T}}_R(\Delta{\vv{r}}) \ket{\vec{r}} &= \eexp{-i\hat{\vv{p}}\cdot{\Delta\vv{r}}/{\hbar}}\ket{\vv{r}}=\ket{\vv{r}+\Delta\vv{r}},\\
+					\hat{\mathcal{T}}_R(\Delta{\vv{p}}) \ket{\vec{p}} &= \eexp{-i\hat{\vv{r}}\cdot{\Delta\vv{p}}/{\hbar}}\ket{\vv{p}}=\ket{\vv{p}+\Delta\vv{p}}.
+				\end{align}
