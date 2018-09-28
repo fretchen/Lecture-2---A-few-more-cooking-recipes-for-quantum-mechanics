@@ -26,7 +26,7 @@
 			\begin{align}
 				\phi(\vv{p})	&=\braket{\vv{p}|\psi}\\
 				&=\int\dif\vv{r}\braket{\vv{p}|\vv{r}}\braket{\vv{r}|\psi}\\
-				&=\frac{1}{(2\pi\hbar)^{\frac{3}{2}}} \int\dif\vv{r}\eexp{-i\vv{p}\cdot\vv{r}/{\hbar}}\psi(\vv{r}) \label{eq:fourier}
+				&=\frac{1}{(2\pi\hbar)^{\frac{3}{2}}} \int\dif\vv{r}\exp{-i\vv{p}\cdot\vv{r}/{\hbar}}\psi(\vv{r}) \label{eq:fourier}
 			\end{align}
 			Equation \eqref{eq:fourier} shows that $\phi(\vv{p})$ and $\psi(\vv{r})$ are Fourier transforms of each other.
 
@@ -43,19 +43,18 @@
 			\end{align}
 			where
 			\begin{align}
-				\hat{U}(t,0) = \eexp{-i{\hat{H}t}/{\hbar}} \label{eq:timeevolutionoperator}
+				\hat{U}(t,0) = \exp{-i{\hat{H}t}/{\hbar}} \label{eq:timeevolutionoperator}
 			\end{align}
 			is the time evolution operator. If we write out the Hamiltonian of the point-like particle in \eqref{eq:schrodinger2}, we get
 			\begin{align}
-				i\hbar \partial_t\psi(\vec{r},t) = -\frac{\hbar^2}{2m}\Laplace\psi(\vv{r},t)+V(\vv{r},t)\psi(\vv{r},t).
+				i\hbar \partial_t\psi(\vec{r},t) = -\frac{\hbar^2}{2m}\nabla\psi(\vv{r},t)+V(\vv{r},t)\psi(\vv{r},t).
 			\end{align}
-			The wave function $\psi(\vec{r},t)$ at time $t$ can be determined with the help of \eqref{eq:psit} and \eqref{eq:timeevolutionoperator}:
+The wave function $\psi(\vec{r},t)$ at time $t$ can be determined with the help of \eqref{eq:psit} and \eqref{eq:timeevolutionoperator}:
 			\begin{align}
 				\psi(\vv{r},t)	&=\braket{\vv{r}|\psi(t)}=\braket{\vv{r}|\hat{U}(t,0)|\psi(0)}\\
 				&=\int\dif\vv{r}'\bra{\vv{r}}\hat{U}(t,0)\overunderbraces{&\br{2}{\mathbb{1}}}{&\ket{\vv{r}'}&\bra{\vv{r}'}&\psi(0)\rangle}{&&\br{2}{\psi(\vv{r}',0)}}.
 			\end{align}
-			% 
-			%\overunderbraces{&\br{2}{a}}{&&}{&&\br{2}{}}
+			
 			The first factor in the integral describes the propagation of a wave packet localized at $\vv{r}'$ during the time $t$. The second factor is the wave function of a particle localized at $\vv{r}'$ at a time $t=0$. %Is wave function of particle?
 
 			\subsubsection{Space and Momentum}
