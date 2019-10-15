@@ -3,7 +3,6 @@ untitled.tex
 gjppnm4s3uo.tex
 87kuo2db5mo.tex
 q4p3vjfh69.tex
-s0ls2djrark.tex
 lo56uk9dboc.html
 pkbb64oemng.tex
 vt7hv0bvdq4.html
