@@ -17,7 +17,7 @@ Another, simple example is that of two spins, each one having two possible state
 We now  would like to understand than if we can disentangle the information about the different labels. Naively, we can now  associate with Alice one set of outcomes and describe it by some state $\ket{\psi_{A}}$ and the Bob has another set $\ket{\psi_{B}}$:
 \begin{align}\label{Eq:Local}
 	\ket{\psi_A}&= a_{\uparrow} \ket{\uparrow_A}+ a_{\downarrow_A} \ket{\downarrow_A}\\
-	\ket{\psi_B}&= b_{\uparrow} \ket{\uparrow_B}+ b_{\downarrow_B} \ket{\downarrow}
+	\ket{\psi_B}&= b_{\uparrow} \ket{\uparrow_B}+ b_{\downarrow_B} \ket{\downarrow_B}
 \end{align}
 
 The full state will then be described by the possible outcomes $\{\uparrow_A\uparrow_B,\downarrow_A\uparrow_B,\uparrow_A\downarrow_B, \downarrow_A\downarrow_B\}$. We can then write:
@@ -27,7 +27,7 @@ The full state will then be described by the possible outcomes $\{\uparrow_A\upa
 \end{align}
 So we will typically just plug the labels into a single ket and drop indices, to avoid rewriting the tensor symbol each time. We say that a state is separable, if we can write it as a product of the two individual states \eqref{Eq:Local}:
 \begin{align}
-\ket{\psi} = \ket{\psi_A}\otimes\ket{\psi_B}
+\ket{\psi} = \ket{\psi_A}\otimes\ket{\psi_B}\
 \end{align}
 
 All other states are called \textit{entangled}. As for the shared coin, we
