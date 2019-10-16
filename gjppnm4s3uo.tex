@@ -15,7 +15,7 @@ In AMO we typically would like to characterize is the state of an electron in a 
 Another, simple example is that of two spins, each one having two possible states $\{\uparrow, \downarrow\}$. This is a standard problem in optical communication, where you send correlated photons with a certain polarization to different people. We will typically call them Alice and Bob \footnote{And if someone wants to listen the person is called Eve}.
 
 We now  would like to understand than if we can disentangle the information about the different labels. Naively, we can now  associate with Alice one set of outcomes and describe it by some state $\ket{\psi_{A}}$ and the Bob has another set $\ket{\psi_{B}}$:
-\begin{align}
+\begin{align}\
 	\ket{\psi_A}&= a_{\uparrow} \ket{\uparrow_A}+ a_{\downarrow_A} \ket{\downarrow}\\
 	\ket{\psi_B}&= b_{\uparrow} \ket{\uparrow_B}+ b_{\downarrow_B} \ket{\downarrow}
 \end{align}
@@ -25,7 +25,7 @@ The full state will then be described by the possible outcomes $\{\uparrow_A\upa
 \ket{\psi} &= \alpha_{\uparrow\uparrow}(\ket{\uparrow_A}\otimes\ket{\uparrow_B})+\alpha_{\uparrow\downarrow}(\ket{\uparrow_A}\otimes\ket{\downarrow_B})+\alpha_{\downarrow\uparrow}(\ket{\downarrow_A}\otimes\ket{\uparrow_B})+\alpha_{\downarrow\downarrow}(\ket{\downarrow_A}\otimes\ket{\downarrow_B})\\
 &= \alpha_{\uparrow\uparrow}\ket{\uparrow\uparrow}+\alpha_{\uparrow\downarrow}\ket{\uparrow\downarrow}+\alpha_{\downarrow\uparrow}\ket{\downarrow \uparrow}+\alpha_{\downarrow\downarrow}\ket{\downarrow\downarrow}
 \end{align}
-So we will typically just plug the labels into a single ket and drop indices, to avoid rewriting the tensor symbol each time. We say that a state is separable, if we can write it as a product of the two individual states
+So we will typically just plug the labels into a single ket and drop indices, to avoid rewriting the tensor symbol each time. We say that a state is separable, if we can write it as a product of the two individual states:
 
 
 All other states are called \textit{entangled}. As for the shared coin, we
